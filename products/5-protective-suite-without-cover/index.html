@@ -144,7 +144,7 @@
             <div class="contact">
               <button class="snipcart-add-item btn btn-primary" data-item-id="5"
                       data-item-name="Protective Suite without cover"  data-item-image="https://cdn.jsdelivr.net/gh/wzhix/image-hosting/images/20200421210711.png"
-                       data-item-price="" data-item-url="https://theppemaskclub.com/products/5-protective-suite-without-cover/" onclick="document.getElementById('submit').scrollIntoView()">
+                       data-item-price="" data-item-url="https://theppemaskclub.com/products/5-protective-suite-without-cover/" onclick="document.getElementById('name').focus()">
                 Contact Us
               </button>
             </div>
@@ -199,14 +199,12 @@
       </div>
       <div class="col-lg-4 col-md-5">
         <h5 class="font-weight-medium mb-4">Contact us</h5>
-        <form onsubmit="return false" action="#" method="POST">
-          <input type="text" class="form-control mb-2" id="name" name="name" placeholder="Your Name">
-          <input type="email" class="form-control mb-2" id="email" name="email" placeholder="Your Email">
-          <textarea name="message" id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
-
-          <button type="submit" id="submit" value="send" class="btn btn-block btn-outline-primary rounded btn-submit-ticket">Send Now</button>
+        <form id="form" action="#">
+          <input type="text" class="form-control mb-2" id="name" name="name" required placeholder="Your Name" maxlength="128">
+          <input type="email" class="form-control mb-2" id="email" name="email" required placeholder="Your Email" maxlength="128">
+          <textarea name="message" id="message" class="form-control mb-2" required placeholder="Your Message" maxlength="1024"></textarea>
+          <button type="button" id="submit" value="send" class="btn btn-block btn-outline-primary rounded btn-submit-ticket">Send Now</button>
         </form>
-
       </div>
     </div>
     <div class="row">
